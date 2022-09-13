@@ -11,7 +11,8 @@ class LoginPage(BasePage):
     
     def should_be_login_url(self):
         current_url = self.browser.current_url
-        
+        print("сейчас проверяем ссылку ",current_url," на вхождение java")
+
         assert "login" in current_url, "It isn't a login link!"
 
     def should_be_login_form(self):
