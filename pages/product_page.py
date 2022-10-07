@@ -23,7 +23,7 @@ class ProductPage(BasePage):
         product_price_in_message = find_product_price_in_message.text
         print(f"{product_name_in_message = }\n{product_price_in_message = }")
 
-        assert product_name in product_name_in_message, "Names are different"
+        assert product_name == product_name_in_message, "Names are different"
 
         assert product_price in product_price_in_message, "Prices are different"
 
