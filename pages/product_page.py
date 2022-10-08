@@ -27,4 +27,11 @@ class ProductPage(BasePage):
 
         assert product_price in product_price_in_message, "Prices are different"
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+
+
+
 
